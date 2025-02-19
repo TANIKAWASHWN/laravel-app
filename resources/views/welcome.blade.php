@@ -168,6 +168,8 @@
 
                     <footer class="py-16 text-center text-sm text-black dark:text-white/70">
                         Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
+                        <br>
+                        <a href="{{ route('contact.index') }}">お問い合わせフォームへ</a>
                     </footer>
                 </div>
             </div>
