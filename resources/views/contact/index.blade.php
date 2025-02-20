@@ -47,4 +47,5 @@
             <input type="submit" value="入力内容を確認する" class="btn btn-primary">
         </div>
     </form>
+    あああ
 </article>
