@@ -1,51 +1,44 @@
-<article>
-    <h1>お問い合わせフォーム</h1>
+<h1>お問い合わせフォーム</h1>
+<h3>確認画面</h3>
 
-    <form method="POST" action="{{ route('contact.thanks') }}">
+<form method="POST" action="{{ route('contact.thanks') }}">
     @csrf
-
-    <h2>お客様の情報を確認してください</h2>
     
-    <div class="form">
-        <div class="form_title">
-            お名前
-        </div>
-        <div class="form_input">
-            <input type="hidden" name="name" value="{{ $name }}">
-            {{ $name }}
-        </div>
-        
-        <div class="form_title">
-            メールアドレス
-        </div>
-        <div class="form_input">
-            <input type="hidden" name="mail" value="{{ $mail }}">
-            {{ $mail }}
-        </div>
+    <div>
+        <label>お名前</label>
+        <input type="hidden" name="name" value="{{ $name }}">
+        {{ $name }}
     </div>
 
-    <h2>お問い合わせ内容を確認してください</h2>
-    
-    <div class="form">
-        <div class="form_title">
-            タイトル
-        </div>
-        <div class="form_input">
-            <input type="hidden" name="title" value="{{ $title }}">
-            {{ $title }}
-        </div>
-        
-        <div class="form_title">
-            お問い合わせ内容
-        </div>
-        <div class="form_input">
-            <input type="hidden" name="content" value="{{ $content }}">
-            {{ $content }}
-        </div>
+    <div>
+        <label>電話番号</label>
+        <input type="hidden" name="tel" value="{{ $tel }}">
+        {{ $tel }}
     </div>
 
-    <div class="submit">
-        <input type="submit" value="入力内容を送信する">
+    <div>
+        <label>メールアドレス</label>
+        <input type="hidden" name="mail" value="{{ $mail }}">
+        {{ $mail }}
     </div>
-    </form>
-</article>
+
+    <h3>お問い合わせ内容を確認してください</h3>
+
+    <div>
+        <label>タイトル</label>
+        <input type="hidden" name="title" value="{{ $title }}">
+        {{ $title }}
+    </div>
+
+    <div>
+        <label>お問い合わせ内容</label>
+        <input type="hidden" name="content" value="{{ $content }}">
+        {{ $content }}
+    </div>
+
+    <!-- 戻るボタン -->
+    <button type="button" onclick="window.history.back();">戻る</button>
+
+    <!-- 送信ボタン -->
+    <input type="submit" name="btn_submit" value="入力内容を送信する">
+</form>

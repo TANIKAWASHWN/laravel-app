@@ -5,7 +5,7 @@ use App\Http\Controllers\ContactController;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 
 // お問い合わせフォーム（入力、確認、送信）
 Route::get('contact', [ContactController::class, 'index'])->name('contact.index');
