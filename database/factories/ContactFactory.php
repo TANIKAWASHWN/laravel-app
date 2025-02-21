@@ -28,8 +28,8 @@ class ContactFactory extends Factory
             'name' => $this->faker->name,
             'tel' => $this->faker->phoneNumber,
             'mail' => $this->faker->safeEmail,
-            'title' => $this->faker->sentence,
-            'content' => $this->faker->paragraph,
+            'title' => $this->faker->realText(50),
+            'content' => $this->faker->realText(200),
             'created_at' => now(),
             'updated_at' => now(),
         ];
