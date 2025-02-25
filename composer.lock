@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "84806e62f9337744afaf03ab024a14a8",
+    "content-hash": "d6c083b04e73afd8ea1cc978bddab18d",
     "packages": [
         {
             "name": "brick/math",
@@ -6353,41 +6353,43 @@
             "time": "2020-07-09T08:09:16+00:00"
         },
         {
-            "name": "laravel-lang/config",
-            "version": "1.10.0",
+            "name": "laravel/breeze",
+            "version": "v2.3.5",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Laravel-Lang/config.git",
-                "reference": "67c9273a2e5487441a7034c2422bb1527200bce5"
+                "url": "https://github.com/laravel/breeze.git",
+                "reference": "1d85805c4aecc425a0ce157147384d4becea3fa2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Laravel-Lang/config/zipball/67c9273a2e5487441a7034c2422bb1527200bce5",
-                "reference": "67c9273a2e5487441a7034c2422bb1527200bce5",
+                "url": "https://api.github.com/repos/laravel/breeze/zipball/1d85805c4aecc425a0ce157147384d4becea3fa2",
+                "reference": "1d85805c4aecc425a0ce157147384d4becea3fa2",
                 "shasum": ""
             },
             "require": {
-                "archtechx/enums": "^1.0",
-                "illuminate/config": "^10.0 || ^11.0",
-                "illuminate/support": "^10.0 || ^11.0",
-                "laravel-lang/locale-list": "^1.4",
-                "php": "^8.1"
+                "illuminate/console": "^11.0|^12.0",
+                "illuminate/filesystem": "^11.0|^12.0",
+                "illuminate/support": "^11.0|^12.0",
+                "illuminate/validation": "^11.0|^12.0",
+                "php": "^8.2.0",
+                "symfony/console": "^7.0"
             },
             "require-dev": {
-                "orchestra/testbench": "^8.23 || ^9.1",
-                "pestphp/pest": "^2.34"
+                "laravel/framework": "^11.0|^12.0",
+                "orchestra/testbench-core": "^9.0|^10.0",
+                "phpstan/phpstan": "^2.0"
             },
             "type": "library",
             "extra": {
                 "laravel": {
                     "providers": [
-                        "LaravelLang\\Config\\ServiceProvider"
+                        "Laravel\\Breeze\\BreezeServiceProvider"
                     ]
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "LaravelLang\\Config\\": "src/"
+                    "Laravel\\Breeze\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -6396,533 +6398,20 @@
             ],
             "authors": [
                 {
-                    "name": "Andrey Helldar",
-                    "email": "helldar@dragon-code.pro",
-                    "homepage": "https://dragon-code.pro"
-                },
-                {
-                    "name": "Laravel-Lang Team",
-                    "homepage": "https://laravel-lang.com"
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
                 }
             ],
-            "description": "The Laravel-Lang config package",
+            "description": "Minimal Laravel authentication scaffolding with Blade and Tailwind.",
             "keywords": [
-                "Laravel-lang",
-                "Settings",
-                "config",
-                "lang",
-                "languages",
-                "laravel",
-                "locale",
-                "locales",
-                "localization",
-                "localizations",
-                "translation",
-                "translations"
+                "auth",
+                "laravel"
             ],
             "support": {
-                "issues": "https://github.com/Laravel-Lang/config/issues",
-                "source": "https://github.com/Laravel-Lang/config/tree/1.10.0"
+                "issues": "https://github.com/laravel/breeze/issues",
+                "source": "https://github.com/laravel/breeze"
             },
-            "time": "2024-09-07T11:28:53+00:00"
-        },
-        {
-            "name": "laravel-lang/lang",
-            "version": "15.15.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Laravel-Lang/lang.git",
-                "reference": "f17718e233d3f97adac597a3d3e426f77b4dac36"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Laravel-Lang/lang/zipball/f17718e233d3f97adac597a3d3e426f77b4dac36",
-                "reference": "f17718e233d3f97adac597a3d3e426f77b4dac36",
-                "shasum": ""
-            },
-            "require": {
-                "ext-json": "*",
-                "laravel-lang/publisher": "^16.0",
-                "php": "^8.2"
-            },
-            "conflict": {
-                "laravel/framework": "<11.0.7"
-            },
-            "require-dev": {
-                "laravel-lang/status-generator": "^2.11",
-                "phpunit/phpunit": "^10.0",
-                "symfony/var-dumper": "^7.0"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "LaravelLang\\Lang\\ServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "LaravelLang\\Lang\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Laravel-Lang Team",
-                    "homepage": "https://github.com/Laravel-Lang"
-                }
-            ],
-            "description": "List of 126 languages for Laravel Framework, Laravel Jetstream, Laravel Fortify, Laravel Breeze, Laravel Cashier, Laravel Nova, Laravel Spark and Laravel UI",
-            "keywords": [
-                "lang",
-                "languages",
-                "laravel",
-                "lpm"
-            ],
-            "support": {
-                "issues": "https://github.com/Laravel-Lang/lang/issues",
-                "source": "https://github.com/Laravel-Lang/lang"
-            },
-            "time": "2025-02-18T07:29:32+00:00"
-        },
-        {
-            "name": "laravel-lang/locale-list",
-            "version": "1.4.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Laravel-Lang/locale-list.git",
-                "reference": "48b8e4304f8b1ad34456270d35d44ca0c3e6ea0d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Laravel-Lang/locale-list/zipball/48b8e4304f8b1ad34456270d35d44ca0c3e6ea0d",
-                "reference": "48b8e4304f8b1ad34456270d35d44ca0c3e6ea0d",
-                "shasum": ""
-            },
-            "require": {
-                "archtechx/enums": "^0.3.2 || ^1.0",
-                "php": "^8.1"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "LaravelLang\\LocaleList\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Andrey Helldar",
-                    "email": "helldar@dragon-code.pro",
-                    "homepage": "https://dragon-code.pro"
-                },
-                {
-                    "name": "Laravel-Lang Team",
-                    "homepage": "https://laravel-lang.com"
-                }
-            ],
-            "description": "List of localizations available in Laravel Lang projects",
-            "keywords": [
-                "Laravel-lang",
-                "lang",
-                "languages",
-                "laravel",
-                "locale",
-                "locales",
-                "localization",
-                "translation",
-                "translations"
-            ],
-            "support": {
-                "issues": "https://github.com/Laravel-Lang/locale-list/issues",
-                "source": "https://github.com/Laravel-Lang/locale-list"
-            },
-            "time": "2024-06-01T00:24:42+00:00"
-        },
-        {
-            "name": "laravel-lang/locales",
-            "version": "2.9.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Laravel-Lang/locales.git",
-                "reference": "e7914ccfb91432ebebacf46697b573a330d702c7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Laravel-Lang/locales/zipball/e7914ccfb91432ebebacf46697b573a330d702c7",
-                "reference": "e7914ccfb91432ebebacf46697b573a330d702c7",
-                "shasum": ""
-            },
-            "require": {
-                "archtechx/enums": "^0.3.2 || ^1.0",
-                "dragon-code/support": "^6.11.3",
-                "ext-json": "*",
-                "illuminate/collections": "^10.0 || ^11.0",
-                "laravel-lang/config": "^1.0.2",
-                "laravel-lang/locale-list": "^1.2",
-                "laravel-lang/native-country-names": "^1.3",
-                "laravel-lang/native-currency-names": "^1.3",
-                "laravel-lang/native-locale-names": "^2.2",
-                "php": "^8.1"
-            },
-            "require-dev": {
-                "orchestra/testbench": "^8.0 || ^9.0",
-                "pestphp/pest": "^2.24.1",
-                "symfony/var-dumper": "^6.0 || ^7.0"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "LaravelLang\\Locales\\ServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "LaravelLang\\Locales\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Andrey Helldar",
-                    "email": "helldar@dragon-code.pro"
-                },
-                {
-                    "name": "Laravel-Lang Team",
-                    "homepage": "https://laravel-lang.com"
-                }
-            ],
-            "description": "Basic functionality for working with localizations",
-            "keywords": [
-                "laravel",
-                "locale",
-                "locales",
-                "localization",
-                "translation",
-                "translations"
-            ],
-            "support": {
-                "issues": "https://github.com/Laravel-Lang/locales/issues",
-                "source": "https://github.com/Laravel-Lang/locales"
-            },
-            "time": "2024-06-24T09:56:41+00:00"
-        },
-        {
-            "name": "laravel-lang/native-country-names",
-            "version": "1.4.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Laravel-Lang/native-country-names.git",
-                "reference": "cddca6627c8732770a2e2c11c921753b6d0adb66"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Laravel-Lang/native-country-names/zipball/cddca6627c8732770a2e2c11c921753b6d0adb66",
-                "reference": "cddca6627c8732770a2e2c11c921753b6d0adb66",
-                "shasum": ""
-            },
-            "require": {
-                "dragon-code/support": "^6.11",
-                "ext-json": "*",
-                "illuminate/collections": "^10.0 || ^11.0",
-                "php": "^8.1"
-            },
-            "require-dev": {
-                "illuminate/support": "^10.0 || ^11.0",
-                "laravel-lang/locale-list": "^1.2",
-                "pestphp/pest": "^2.24.3",
-                "punic/punic": "^3.8",
-                "symfony/console": "^6.3 || ^7.0",
-                "symfony/process": "^6.3 || ^7.0",
-                "symfony/var-dumper": "^6.3 || ^7.0",
-                "vlucas/phpdotenv": "^5.6"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "LaravelLang\\NativeCountryNames\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Andrey Helldar",
-                    "email": "helldar@dragon-code.pro"
-                },
-                {
-                    "name": "Laravel-Lang Team",
-                    "homepage": "https://laravel-lang.com"
-                }
-            ],
-            "description": "The project contains native translations of country names",
-            "keywords": [
-                "Laravel-lang",
-                "countries",
-                "country",
-                "lang",
-                "languages",
-                "laravel",
-                "locale",
-                "locales",
-                "localization",
-                "territories",
-                "territory",
-                "translation",
-                "translations"
-            ],
-            "support": {
-                "issues": "https://github.com/Laravel-Lang/native-country-names/issues",
-                "source": "https://github.com/Laravel-Lang/native-country-names"
-            },
-            "time": "2024-03-13T09:34:55+00:00"
-        },
-        {
-            "name": "laravel-lang/native-currency-names",
-            "version": "1.4.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Laravel-Lang/native-currency-names.git",
-                "reference": "2e0fbe039421ac753b4fd5256bd239147a0a88fe"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Laravel-Lang/native-currency-names/zipball/2e0fbe039421ac753b4fd5256bd239147a0a88fe",
-                "reference": "2e0fbe039421ac753b4fd5256bd239147a0a88fe",
-                "shasum": ""
-            },
-            "require": {
-                "dragon-code/support": "^6.11",
-                "ext-json": "*",
-                "illuminate/collections": "^10.0 || ^11.0",
-                "php": "^8.1"
-            },
-            "require-dev": {
-                "illuminate/support": "^10.0 || ^11.0",
-                "laravel-lang/locale-list": "^1.2",
-                "pestphp/pest": "^2.24.3",
-                "punic/punic": "^3.8",
-                "symfony/console": "^6.3 || ^7.0",
-                "symfony/process": "^6.3 || ^7.0",
-                "symfony/var-dumper": "^6.3 || ^7.0",
-                "vlucas/phpdotenv": "^5.6"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "LaravelLang\\NativeCurrencyNames\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Andrey Helldar",
-                    "email": "helldar@dragon-code.pro"
-                },
-                {
-                    "name": "Laravel-Lang Team",
-                    "homepage": "https://laravel-lang.com"
-                }
-            ],
-            "description": "The project contains native translations of currency names",
-            "keywords": [
-                "Laravel-lang",
-                "currency",
-                "lang",
-                "languages",
-                "laravel",
-                "locale",
-                "locales",
-                "localization",
-                "translation",
-                "translations"
-            ],
-            "support": {
-                "issues": "https://github.com/Laravel-Lang/native-currency-names/issues",
-                "source": "https://github.com/Laravel-Lang/native-currency-names"
-            },
-            "time": "2024-03-13T09:40:02+00:00"
-        },
-        {
-            "name": "laravel-lang/native-locale-names",
-            "version": "2.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Laravel-Lang/native-locale-names.git",
-                "reference": "39ef3330938b74277456049bf386453109e4d05c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Laravel-Lang/native-locale-names/zipball/39ef3330938b74277456049bf386453109e4d05c",
-                "reference": "39ef3330938b74277456049bf386453109e4d05c",
-                "shasum": ""
-            },
-            "require": {
-                "dragon-code/support": "^6.11",
-                "ext-json": "*",
-                "php": "^8.1"
-            },
-            "require-dev": {
-                "illuminate/support": "^10.31 || ^11.0",
-                "laravel-lang/locale-list": "^1.2",
-                "pestphp/pest": "^2.24.3",
-                "punic/punic": "^3.8",
-                "symfony/console": "^6.3 || ^7.0",
-                "symfony/process": "^6.3 || ^7.0",
-                "symfony/var-dumper": "^6.3 || ^7.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "LaravelLang\\NativeLocaleNames\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Andrey Helldar",
-                    "email": "helldar@dragon-code.pro"
-                },
-                {
-                    "name": "Laravel-Lang Team",
-                    "homepage": "https://laravel-lang.com"
-                }
-            ],
-            "description": "The project contains native translations of locale names",
-            "keywords": [
-                "Laravel-lang",
-                "lang",
-                "languages",
-                "laravel",
-                "locale",
-                "locales",
-                "localization",
-                "translation",
-                "translations"
-            ],
-            "support": {
-                "issues": "https://github.com/Laravel-Lang/native-locale-names/issues",
-                "source": "https://github.com/Laravel-Lang/native-locale-names"
-            },
-            "time": "2024-03-13T09:28:19+00:00"
-        },
-        {
-            "name": "laravel-lang/publisher",
-            "version": "16.4.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Laravel-Lang/publisher.git",
-                "reference": "fc33816edbb13e9fd032243afd565efec265926d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Laravel-Lang/publisher/zipball/fc33816edbb13e9fd032243afd565efec265926d",
-                "reference": "fc33816edbb13e9fd032243afd565efec265926d",
-                "shasum": ""
-            },
-            "require": {
-                "composer/semver": "^3.4",
-                "dragon-code/pretty-array": "^4.1",
-                "dragon-code/support": "^6.11.3",
-                "ext-json": "*",
-                "illuminate/collections": "^10.0 || ^11.0",
-                "illuminate/console": "^10.0 || ^11.0",
-                "illuminate/support": "^10.0 || ^11.0",
-                "laravel-lang/config": "^1.0",
-                "laravel-lang/locales": "^2.3",
-                "league/commonmark": "^2.4.1",
-                "league/config": "^1.2",
-                "php": "^8.1"
-            },
-            "conflict": {
-                "laravel-lang/attributes": "<2.0",
-                "laravel-lang/http-statuses": "<3.0",
-                "laravel-lang/lang": "<11.0"
-            },
-            "require-dev": {
-                "laravel-lang/json-fallback": "^2.0",
-                "orchestra/testbench": "^8.14 || ^9.0",
-                "phpunit/phpunit": "^10.4.2",
-                "symfony/var-dumper": "^6.3.6 || ^7.0"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "LaravelLang\\Publisher\\ServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "LaravelLang\\Publisher\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Andrey Helldar",
-                    "email": "helldar@dragon-code.pro"
-                },
-                {
-                    "name": "Laravel-Lang Team",
-                    "homepage": "https://laravel-lang.com"
-                }
-            ],
-            "description": "Publisher lang files for the Laravel and Lumen Frameworks, Jetstream, Fortify, Cashier, Spark and Nova from Laravel-Lang/lang",
-            "keywords": [
-                "Laravel-lang",
-                "breeze",
-                "cashier",
-                "fortify",
-                "framework",
-                "i18n",
-                "jetstream",
-                "lang",
-                "languages",
-                "laravel",
-                "locale",
-                "locales",
-                "localization",
-                "localizations",
-                "lpm",
-                "lumen",
-                "nova",
-                "publisher",
-                "spark",
-                "trans",
-                "translation",
-                "translations",
-                "validations"
-            ],
-            "support": {
-                "issues": "https://github.com/Laravel-Lang/publisher/issues",
-                "source": "https://github.com/Laravel-Lang/publisher"
-            },
-            "time": "2025-01-17T10:45:02+00:00"
+            "time": "2025-02-19T23:49:42+00:00"
         },
         {
             "name": "laravel/pail",
