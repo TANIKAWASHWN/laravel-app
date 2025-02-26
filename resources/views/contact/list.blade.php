@@ -4,7 +4,7 @@
 <div class="bg-gray-100 text-gray-900">
 
     <div class="max-w-7xl mx-auto py-12 px-6">
-        
+
         <h1 class="text-3xl font-semibold text-center mb-8">お問い合わせ内容の一覧</h1>
 
         <table class="min-w-full table-auto bg-white border border-gray-300 shadow-md rounded-lg">

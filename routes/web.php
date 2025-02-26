@@ -3,6 +3,11 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\HomeController;
+
+// Auth
+use Illuminate\Support\Facades\Auth;
+Auth::routes();
 
 Route::get('/', function () {
     return view('welcome');
@@ -20,6 +25,10 @@ Route::get('contact/{id}', [ContactController::class, 'detail'])->whereNumber('i
 // 詳細にて、個別に削除
 Route::delete('contact/{id}/delete', [ContactController::class, 'delete'])->name('contact.delete');
 
+// ログインが必要なルートにミドルウェアを設定
+Route::middleware(['auth'])->get('contact/list', [ContactController::class, 'list'])->name('contact.list');
+
+// 追加
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -31,3 +40,13 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+// Language Switcher Route 言語切替用ルートだよ
+Route::get('language/{locale}', function ($locale) {
+    app()->setLocale($locale);
+    session()->put('locale', $locale);
+
+    return redirect()->back();
+});
+
+Route::get('/home', [HomeController::class, 'index'])->name('home');
