@@ -18,6 +18,19 @@ class ContactRepository
         }
     }
 
+    public function getContactSearch(string $keyword = null)
+    {
+        $contact_search_query = Contact::select('id', 'name', 'mail');
+
+        if (!empty($keyword)) {
+            $contact_search_query->where(function ($query) use ($keyword) {
+                $query->where('name', 'LIKE', "%{$keyword}%")
+                      ->orWhere('mail', 'LIKE', "%{$keyword}%");
+            });
+        }
+        return $contact_search_query;
+    }
+
     public function getContactDetail($id)
     {
         return Contact::select('id', 'name', 'mail', 'title', 'content')

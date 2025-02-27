@@ -18,7 +18,7 @@ class ContactController extends Controller
     {
         return view('contact.index');
     }
-    
+
     public function confirm(Request $request)
     {
         $attributes = $request->validate([
@@ -38,16 +38,16 @@ class ContactController extends Controller
 
         return view('contact.confirm', $attributes);
     }
-    
+
     public function thanks(Request $request)
     {
-        
+
         $attributes = $request->only(['name', 'tel', 'mail', 'title', 'content']);
 
         Contact::create($attributes);
 
         return view('contact.thanks', $attributes);
-        
+
     }
 
     public function list()
@@ -55,6 +55,17 @@ class ContactController extends Controller
        $contact_list = $this->contact_repository->getContactList(limit:10, use_paginate: true);
 
        return view('contact.list', ['contact_list' => $contact_list]);
+    }
+
+    public function search(Request $request)
+    {
+        $keyword = $request->input('keyword');
+
+        $contact_query = $this->contact_repository->getContactSearch($keyword);
+
+        $contact_search = $contact_query->paginate(10);
+
+        return view('contact.search', ['contact_search' => $contact_search]);
     }
 
     public function detail($id)
@@ -69,10 +80,9 @@ class ContactController extends Controller
     public function delete($id)
     {
         $contact = Contact::find($id);
-        if ($contact) {
-            $contact->delete();
-            return redirect()->route('contact.list')->with('success', 'お問い合わせが削除されました。');
-        }
-        return redirect()->route('contact.list')->with('error', '該当のお問い合わせが見つかりませんでした。');
-        }
+
+        $contact->delete();
+
+        return redirect()->route('contact.list');
+    }
 }

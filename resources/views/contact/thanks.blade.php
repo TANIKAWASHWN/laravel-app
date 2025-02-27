@@ -23,7 +23,7 @@
     </nav>
 
     <h1 class="text-3xl font-semibold text-blue-700">お問い合わせフォーム</h1>
-    
+
     <h3 class="text-xl font-semibold text-blue-600 mt-2">送信完了</h3>
 
     <div class="bg-blue-100 border-t border-b border-blue-500 px-4 py-6" role="alert">
