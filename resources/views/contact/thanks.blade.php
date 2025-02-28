@@ -1,3 +1,5 @@
+<title>送信完了</title>
+
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
 <div class="container mx-auto px-10 mt-10">

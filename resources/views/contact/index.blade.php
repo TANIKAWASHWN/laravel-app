@@ -1,3 +1,5 @@
+<title>お問い合わせフォーム</title>
+
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
 <div class="container mx-auto px-10 py-10 bg-blue-50 rounded-lg shadow-lg">
@@ -59,7 +61,7 @@
                 <span>メールアドレス</span>
                 <span class="bg-yellow-600 text-white font-bold py-1 px-2 text-xs">
                     必須
-                </span>    
+                </span>
             </label>
             <input type="email" name="mail" id="mail" value="{{ old('mail') }}" class="mt-1 block w-full py-2 rounded-md border-gray-300 shadow-sm" placeholder="　例）example@gmail.com">
             @if ($errors->has('mail'))

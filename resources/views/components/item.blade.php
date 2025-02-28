@@ -20,6 +20,7 @@
     </td>
 </tr>
 
+{{-- jsファイルを要作成 --}}
 <script>
     document.getElementById('deleteForm{{ $contact_item->id }}').addEventListener('submit', function(event) {
         if (!confirm('本当に削除してもよろしいですか？復元はできません！')) {
