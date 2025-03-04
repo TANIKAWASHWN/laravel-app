@@ -27,13 +27,6 @@ class ContactController extends Controller
             'mail' => ['required', 'email'],
             'title' => 'required',
             'content' => 'required'
-        ], [
-            'name.required' => '名前は必須項目です。',
-            'tel.numeric' => '電話番号は数字で入力してください。',
-            'mail.required' => 'メールアドレスは必須項目です。',
-            'mail.email' => 'メールアドレスの形式が正しくありません。',
-            'title.required' => 'タイトルは必須項目です。',
-            'content.required' => '内容は必須項目です。',
         ]);
 
         return view('contact.confirm', $attributes);
@@ -71,18 +64,25 @@ class ContactController extends Controller
     public function detail($id)
     {
         $contact = $this->contact_repository->getContactDetail($id);
+
         if (is_null($contact)) {
-            abort(404);
+            abort(404, 'お問い合わせが見つかりません');
         }
+
         return view('contact.detail', ['contact' => $contact]);
     }
 
     public function delete($id)
     {
-        $contact = Contact::find($id);
+        $contact = $this->contact_repository->getContactDetail($id);
+        $contact_name = $contact->name;
 
-        $contact->delete();
+        if (is_null($contact)) {
+            abort(404, 'お問い合わせが見つかりません');
+        } else {
+            $contact->delete();
+        }
 
-        return redirect()->route('contact.list');
+        return redirect()->route('contact.list')->with('message' , "{$contact_name}　さんのお問い合わせが正常に消去されました。");
     }
 }

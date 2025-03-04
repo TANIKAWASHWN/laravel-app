@@ -13,6 +13,7 @@
                     <th class="px-6 py-3 text-left text-sm font-medium text-gray-700">お名前</th>
                     <th class="px-6 py-3 text-left text-sm font-medium text-gray-700">メールアドレス</th>
                     <th class="px-6 py-3 text-left text-sm font-medium text-gray-700">詳細</th>
+                    <th class="px-6 py-3 text-left text-sm font-medium text-gray-700">削除</th>
                 </tr>
             </thead>
             <tbody>

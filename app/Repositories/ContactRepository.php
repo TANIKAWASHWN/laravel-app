@@ -18,7 +18,7 @@ class ContactRepository
         }
     }
 
-    public function getContactSearch(string $keyword = null)
+    public function getContactSearch($keyword = null)
     {
         $contact_search_query = Contact::select('id', 'name', 'mail');
 
