@@ -1,6 +1,7 @@
 <title>お問い合わせの一覧</title>
 
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
 
 <div class="bg-gray-100 text-gray-900">
 
@@ -35,7 +36,7 @@
         <table class="min-w-full table-auto bg-white border border-gray-300 shadow-md rounded-lg">
             <thead>
                 <tr class="bg-gray-100">
-                    <th class="px-6 py-3 text-left text-sm font-medium text-gray-700">日付</th>
+                    <th class="px-6 py-3 text-left text-sm font-medium text-gray-700">@sortablelink('updated_at', '日付')</th>
                     <th class="px-6 py-3 text-left text-sm font-medium text-gray-700">お名前</th>
                     <th class="px-6 py-3 text-left text-sm font-medium text-gray-700">タイトル</th>
                     <th class="px-6 py-3 text-left text-sm font-medium text-gray-700">詳細</th>

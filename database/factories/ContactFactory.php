@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Contact;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Faker\Provider\DateTime; // 追加
 
 class ContactFactory extends Factory
 {
@@ -30,8 +31,8 @@ class ContactFactory extends Factory
             'mail' => $this->faker->safeEmail,
             'title' => $this->faker->realText(50),
             'content' => $this->faker->realText(200),
-            'created_at' => now(),
-            'updated_at' => now(),
+            'created_at' => $this->faker->dateTimeBetween('-20 year', 'now'),
+            'updated_at' => $this->faker->dateTimeBetween('-20 year', 'now'),
         ];
     }
 }

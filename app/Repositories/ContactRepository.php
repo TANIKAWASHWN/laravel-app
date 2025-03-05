@@ -12,9 +12,9 @@ class ContactRepository
         $contact_list_query = Contact::select('id', 'name', 'title', 'created_at', 'updated_at');
 
         if ($use_paginate) {
-            return $contact_list_query->paginate($limit);
+            return $contact_list_query->sortable()->paginate($limit);
         } else {
-            return $contact_list_query->limit($limit)->get();
+            return $contact_list_query->sortable()->limit($limit)->get();
         }
     }
 
