@@ -1,28 +1,32 @@
-<title>検索結果の一覧</title>
-<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<x-app-layout>
 
-<div class="bg-gray-100 text-gray-900">
+    <title>検索結果の一覧</title>
 
-    <div class="max-w-7xl mx-auto py-12 px-6">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
-        <h1 class="text-3xl font-semibold text-center mb-8">検索結果の一覧</h1>
+    <div class="bg-gray-100 text-gray-900">
 
-        <table class="min-w-full table-auto bg-white border border-gray-300 shadow-md rounded-lg">
-            <thead>
-                <tr class="bg-gray-100">
-                    <th class="px-6 py-3 text-left text-sm font-medium text-gray-700">お名前</th>
-                    <th class="px-6 py-3 text-left text-sm font-medium text-gray-700">メールアドレス</th>
-                    <th class="px-6 py-3 text-left text-sm font-medium text-gray-700">詳細</th>
-                    <th class="px-6 py-3 text-left text-sm font-medium text-gray-700">削除</th>
-                </tr>
-            </thead>
-            <tbody>
-                @each('components.search-item', $contact_search, 'contact_item')
-            </tbody>
-        </table>
+        <div class="max-w-7xl mx-auto py-12 px-6">
 
-        <div class="mt-6 flex justify-center">
-            {{ $contact_search->appends(request()->query())->links('components.pagination') }}
+            <h1 class="text-3xl font-semibold text-center mb-8">検索結果の一覧</h1>
+
+            <table class="min-w-full table-auto bg-white border border-gray-300 shadow-md rounded-lg">
+                <thead>
+                    <tr class="bg-gray-100">
+                        <th class="px-6 py-3 text-left text-sm font-medium text-gray-700">お名前</th>
+                        <th class="px-6 py-3 text-left text-sm font-medium text-gray-700">メールアドレス</th>
+                        <th class="px-6 py-3 text-left text-sm font-medium text-gray-700">詳細</th>
+                        <th class="px-6 py-3 text-left text-sm font-medium text-gray-700">削除</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @each('components.search-item', $contact_search, 'contact_item')
+                </tbody>
+            </table>
+
+            <div class="mt-6 flex justify-center">
+                {{ $contact_search->appends(request()->query())->links('components.pagination') }}
+            </div>
         </div>
     </div>
-</div>
+</x-app-layout>

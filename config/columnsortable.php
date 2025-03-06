@@ -15,8 +15,9 @@ return [
             'class' => 'fa fa-sort-amount',
         ],
         'numeric' => [
-            'rows'  => ['created_at', 'level', 'id', 'phone_number'],
-            'class' => 'fa fa-sort-numeric',
+            'rows'  => ['created_at', 'updated_at', 'level', 'id', 'phone_number'],
+            'class' => 'fa-solid fa-up-long',
+            // 'updated_at' を消すと、△▽表示になる・・・なぜ？
         ],
     ],
 
@@ -49,14 +50,12 @@ return [
     /*
     suffix class that is appended when ascending direction is applied
      */
-    // 'asc_suffix'                    => '-asc',
-    'asc_suffix'                    => '-up',
+    'asc_suffix'                    => 'fa-solid fa-up-long', //昇順アイコン
 
     /*
     suffix class that is appended when descending direction is applied
      */
-    // 'desc_suffix'                   => '-desc',
-    'desc_suffix'                   => '-down',
+    'desc_suffix'                   => 'fa-solid fa-down-long', //降順アイコン
 
     /*
     default anchor class, if value is null none is added
@@ -120,4 +119,5 @@ return [
     for more information see https://github.com/Kyslik/column-sortable/issues/59
     */
     'join_type'                     => 'leftJoin',
+
 ];
