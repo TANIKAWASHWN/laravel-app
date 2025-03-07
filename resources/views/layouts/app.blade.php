@@ -28,6 +28,21 @@
                 </header>
             @endisset
 
+            <!-- 追加実装 Breadcrumb Navigation -->            
+            <nav aria-label="breadcrumb" class="mt-6 px-8">
+                <ol class="breadcrumb text-sm text-gray-700" onclick="window.history.back(); return false;">
+                    @if (request()->routeIs('home') || 
+                          request()->routeIs('contact.index') || 
+                          request()->routeIs('contact.confirm') || 
+                          request()->routeIs('contact.thanks') || 
+                          request()->routeIs('contact.list') || 
+                          request()->routeIs('contact.search'))
+                        {{ Breadcrumbs::render() }}
+                    @endif
+                </ol>
+            </nav>
+            
+
             <!-- Page Content -->
             <main>
                 {{ $slot }}

@@ -3,20 +3,6 @@
     <title>お問い合わせフォーム</title>
 
     <div class="container mx-auto px-10 py-10 bg-blue-50 rounded-lg shadow-lg">
-        <!-- パンくずリスト -->
-        <nav class="text-sm mb-6" aria-label="Breadcrumb">
-            <ol class="list-none p-0 inline-flex">
-                <li class="flex items-center">
-                    <a href="{{ route('home') }}" class="text-blue-600 hover:text-blue-800">ホーム</a>
-                    <svg class="h-5 w-auto text-blue-600 mx-2" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                        <path d="M7.05 4.5a1 1 0 011.415 0L13 9l-4.535 4.5a1 1 0 11-1.415-1.415L10.293 9.5 7.05 6.415a1 1 0 010-1.415z" />
-                    </svg>
-                </li>
-                <li>
-                    <span class="text-gray-600">お問い合わせフォーム</span>
-                </li>
-            </ol>
-        </nav>
 
         <h1 class="text-3xl font-semibold text-blue-700">お問い合わせフォーム</h1>
 

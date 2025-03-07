@@ -17,13 +17,33 @@
             <div class="flex justify-center items-center py-4">
                 <form action="{{ route('contact.search') }}" method="GET" class="w-full max-w-md bg-white p-4 rounded-lg shadow-md">
                     @csrf
+
+                    <fieldset>
+                        <label for="search_type" class="block text-gray-700 text-sm font-semibold mb-2">検索項目</label>
+                        <div>
+                            <input type="radio" name="search_type" id="keyword_name" value="name" checked />
+                            <label for="keyword_name">名前</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="search_type" id="keyword_mail" value="mail" />
+                            <label for="keyword_mail">メールアドレス</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="search_type" id="keyword_both" value="both" />
+                            <label for="keyword_both">名前・メールアドレス両方</label>
+                        </div>
+                    </fieldset>
+                    <br>
+
                     <div class="mb-3">
                         <label for="keyword" class="block text-gray-700 text-sm font-semibold mb-2">検索キーワード</label>
                         <input type="text" name="keyword" id="keyword" placeholder="検索キーワードを入力" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm">
                     </div>
+                
                     <div class="flex justify-center">
                         <input type="submit" value="検索" class="px-4 py-2 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm">
                     </div>
+
                     <div class="flex justify-center">
                         <button id="start-btn" type="button" class="bg-blue-500 text-white rounded-full p-2 shadow-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-200 ease-in-out mt-6">
                             <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#ffffff">

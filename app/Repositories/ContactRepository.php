@@ -20,16 +20,23 @@ class ContactRepository
         }
     }
 
-    public function getContactSearch($keyword = null)
+    public function getContactSearch($searchType, $keyword = null)
     {
         $contact_search_query = Contact::select('id', 'name', 'mail');
 
         if (!empty($keyword)) {
-            $contact_search_query->where(function ($query) use ($keyword) {
-                $query->where('name', 'LIKE', "%{$keyword}%")
-                      ->orWhere('mail', 'LIKE', "%{$keyword}%");
-            });
+            if ($searchType === 'name') {
+                $contact_search_query->where('name', 'LIKE', "%{$keyword}%");
+            } elseif ($searchType === 'mail') {
+                $contact_search_query->where('mail', 'LIKE', "%{$keyword}%");
+            } else {
+                $contact_search_query->where(function($query) use ($keyword) {
+                    $query->where('name', 'LIKE', "%{$keyword}%")
+                          ->orWhere('mail', 'LIKE', "%{$keyword}%");
+                });
+            }
         }
+
         return $contact_search_query;
     }
 

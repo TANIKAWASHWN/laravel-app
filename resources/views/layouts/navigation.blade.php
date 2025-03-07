@@ -1,8 +1,8 @@
+@Auth
+
 <nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
 
     <!-- Primary Navigation Menu -->
-
-    @if( Auth::check() )
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
@@ -102,9 +102,11 @@
             </div>
         </div>
     </div>
+</nav>
 
-    @else
+@else
 
+<nav x-data="{ open: true }" class="bg-[#2C3E50]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-[#2C3E50]">
         <div class="flex justify-between h-16">
             <div class="shrink-0 flex items-center">
@@ -113,8 +115,9 @@
                 </div>
             </div>
         </div>
-    </div>    
-
-    @endif
-
+    </div>
 </nav>
+
+@endif
+
+

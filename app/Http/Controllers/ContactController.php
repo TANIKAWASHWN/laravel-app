@@ -52,9 +52,11 @@ class ContactController extends Controller
 
     public function search(Request $request)
     {
+        $searchType = $request->input('search_type');
+        
         $keyword = $request->input('keyword');
 
-        $contact_query = $this->contact_repository->getContactSearch($keyword);
+        $contact_query = $this->contact_repository->getContactSearch($searchType, $keyword);
 
         $contact_search = $contact_query->paginate(10);
 
@@ -83,6 +85,6 @@ class ContactController extends Controller
             $contact->delete();
         }
 
-        return redirect()->route('contact.list')->with('message' , "{$contact_name}　さんのお問い合わせが正常に消去されました。");
+        return redirect()->route('contact.list')->with('message' , "{$contact_name} さんのお問い合わせが正常に消去されました。");
     }
 }
