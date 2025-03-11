@@ -37,9 +37,12 @@ Breadcrumbs::for('contact.search', function (BreadcrumbTrail $trail) {
     $trail->push('検索結果', route('contact.search'));
 });
 
-
 // 参考資料を基に実装を試みるも、予想以上に難航。時間的な制約もあったため、
-// コーディングはAIに任せて進め、最終的に微調整を加える形で作業を完了した。
+// 本人がざっくりコーディングし、詳細なコーディングはAIに任せて、最終的に
+// 微調整を加える形で作業を完了した。
+
+// お問い合わせフォーム関連ページのみ実装
+
 // 参考資料
 // https://laratech.jp/posts/laravel-breadcrumbs/
 // https://zenn.dev/deliku0306/articles/a3e96f3079daaf
